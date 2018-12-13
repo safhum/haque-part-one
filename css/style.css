@@ -1,34 +1,151 @@
 body {
 
     font-family: Fira Sans;
-    font-weight: 600, 400, 300;
-
 
 }
 
-.hero-image {
-    background-image: url(../images/bulldog.jpg);
-    background-color: #F0ECEE;
-    height: 1000px;
+* {
+    box-sizing: border-box;
+}
+
+.bg-img {
+    /* The image used */
+    background-image: url("../images/bulldog.jpg");
+
+    min-height: 900px;
+
+    /* Center and scale the image nicely */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
+    /* Needed to position the navbar */
     position: relative;
+}
+
+/* Position the navbar container inside the image */
+.container {
+    position: absolute;
+    margin: 20px;
+    width: 100%;
+    padding: 10px;
+}
+
+
+@media (max-width: 767px) {
+    .bg-img {
+        background-image: none;
+        background-color: #F0ECEE;
+    }
+
+    .leftnav {
+        width: 100%;
+    }
+
+    .topnav {
+        margin-left: -335px;
+    }
+
+    .btn-primary {
+        color: white;
+        background-color: #FF4850;
+        text-align: center;
+        padding: 10px;
+        text-decoration: none;
+        font-size: 17px;
+        border-radius: 15px;
+        width: 95%;
+    }
+
+    .topnav a {
+        color: #88898B;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        width: 100%;
+        text-align: inherit !important;
+    }
+
+    .hero-text {
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 44% !important;
+
+        transform: translate(-50%, -50%);
+        margin: 20px;
+        width: auto;
+        padding: 10px;
+        width: 100% !important;
+
+    }
+
+}
+
+
+.topnav {
+    overflow: hidden;
+    color: #88898B;
+    width: auto;
+    padding-left: 48%;
+}
+
+/* Navbar links */
+.topnav a {
+    float: left;
+    color: #88898B;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.text-color {
+    color: #88898B;
+}
+
+.leftnav {
+    float: left;
+}
+
+.logo {
+    font-weight: 400;
+    font-size: 2em;
+}
+
+.btn-primary {
+    color: white;
+    background-color: #FF4850;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 17px;
+    border-radius: 15px;
+}
+
+.topnav button:hover {
+    background-color: #CCC;
+    color: #FF4850;
+}
+
+.emphasis {
+    color: #FF4850;
 }
 
 .hero-text {
     text-align: center;
     position: absolute;
     top: 50%;
-    left: 14%;
+    left: 18%;
     transform: translate(-50%, -50%);
-    color: white;
+    margin: 20px;
+    width: auto;
+    padding: 10px;
+    width: 33%;
+
 }
 
-.find-button {
-    background-color: #FF4850;
-    padding: 10px;
-    border-radius: 15px;
-    color:white;
 
+h4 {
+    font-weight: 300;
 }
